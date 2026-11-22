@@ -133,8 +133,11 @@
     display: none !important;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
   .anim-emblem,
   .anim-rise,
+  .anim-late,
   .pulse-hint,
   .mote {
     animation: none;
