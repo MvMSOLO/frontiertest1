@@ -32,6 +32,7 @@ export function GameApp() {
   const engineRef = useRef<FrontierEngine | null>(null);
   const handleRef = useRef<(e: GameEvent) => void>(() => {});
   const granted = useRef(false);
+  const orientationRequested = useRef(false);
   const returnTo = useRef<Screen>("menu");
   const [load, setLoad] = useState({ p: 0.02, label: "Reading the archive" });
   const [loadError, setLoadError] = useState<string | null>(null);
@@ -141,7 +142,20 @@ export function GameApp() {
 
   useEffect(() => {
     useGame.getState().hydrate();
-    const unlock = () => audio().unlock();
+    const unlock = () => {
+      audio().unlock();
+      if (orientationRequested.current) return;
+      const orientation = window.screen.orientation as ScreenOrientation & {
+        lock?: (value: "landscape") => Promise<void>;
+      };
+      if (typeof orientation?.lock !== "function") return;
+      orientationRequested.current = true;
+      void orientation.lock("landscape").catch(() => {
+        // Some browsers only allow orientation lock from installed fullscreen PWAs.
+        // The portrait CSS gate remains the reliable fallback.
+        orientationRequested.current = false;
+      });
+    };
     window.addEventListener("pointerdown", unlock);
     window.addEventListener("keydown", unlock);
     const onVis = () => {
