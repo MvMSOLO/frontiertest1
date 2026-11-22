@@ -250,7 +250,7 @@ canvas {
   }
 
   body::after {
-    content: "↻\\A ROTATE YOUR DEVICE\\A\\A FRONTIER IS BUILT FOR LANDSCAPE PLAY";
+    content: "↻\A ROTATE YOUR DEVICE\A\A FRONTIER IS BUILT FOR LANDSCAPE PLAY";
     white-space: pre;
     position: fixed;
     z-index: 2147483647;
