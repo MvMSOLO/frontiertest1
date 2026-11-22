@@ -143,3 +143,197 @@
     animation: none;
   }
 }
+
+
+/* FRONTIER presentation layer */
+:root {
+  color-scheme: dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  color: #071018;
+  background: #3ecfff;
+}
+
+button,
+input,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  transition:
+    transform 180ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    border-color 180ms ease,
+    background-color 180ms ease,
+    box-shadow 180ms ease,
+    color 180ms ease;
+}
+
+button:active:not(:disabled) {
+  transform: translateY(1px) scale(0.985);
+}
+
+.panel {
+  border-color: color-mix(in srgb, var(--color-primary) 17%, var(--color-line));
+  background:
+    linear-gradient(145deg, rgba(22, 43, 62, 0.94), rgba(7, 16, 24, 0.94));
+  box-shadow:
+    0 18px 55px rgba(0, 0, 0, 0.32),
+    inset 0 1px 0 rgba(255, 255, 255, 0.055);
+  backdrop-filter: blur(18px) saturate(125%);
+}
+
+.safe {
+  box-sizing: border-box;
+}
+
+.safe button {
+  touch-action: manipulation;
+}
+
+.scroll {
+  overscroll-behavior: contain;
+}
+
+nav {
+  padding-bottom: env(safe-area-inset-bottom);
+  box-shadow: 0 -12px 36px rgba(0, 0, 0, 0.22);
+}
+
+nav button {
+  position: relative;
+  min-width: 0;
+  letter-spacing: 0.025em;
+}
+
+nav button[aria-current="page"],
+nav button:focus-visible {
+  color: var(--color-primary);
+}
+
+nav button:focus-visible {
+  outline-offset: -3px;
+}
+
+input[type="range"] {
+  min-height: 30px;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--color-primary);
+}
+
+canvas {
+  display: block;
+}
+
+/* The game is intentionally landscape-only on phones.
+   The CSS gate remains effective where Screen Orientation API is unavailable. */
+@media (orientation: portrait) {
+  body::before {
+    content: "";
+    position: fixed;
+    z-index: 2147483646;
+    inset: 0;
+    display: block;
+    background:
+      radial-gradient(ellipse at 50% 38%, rgba(62, 207, 255, 0.13), transparent 38%),
+      linear-gradient(145deg, #0d2030 0%, #071018 58%, #03080d 100%);
+  }
+
+  body::after {
+    content: "↻\\A ROTATE YOUR DEVICE\\A\\A FRONTIER IS BUILT FOR LANDSCAPE PLAY";
+    white-space: pre;
+    position: fixed;
+    z-index: 2147483647;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 28px;
+    color: #e7eef6;
+    text-align: center;
+    font-family: "Syne", "Avenir Next", sans-serif;
+    font-size: clamp(15px, 3.2vw, 22px);
+    font-weight: 800;
+    line-height: 1.8;
+    letter-spacing: 0.16em;
+    text-shadow: 0 0 28px rgba(62, 207, 255, 0.22);
+    pointer-events: all;
+  }
+}
+
+@media (orientation: landscape) {
+  body::before,
+  body::after {
+    content: none;
+    display: none;
+  }
+
+  #root,
+  body {
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+    min-height: 100%;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 520px) {
+  .safe {
+    padding-top: max(env(safe-area-inset-top), 4px);
+    padding-bottom: max(env(safe-area-inset-bottom), 4px);
+  }
+
+  .safe [aria-label="Movement"] {
+    width: 92px;
+    height: 92px;
+    bottom: 8px;
+    left: 10px;
+  }
+
+  .safe [aria-label="Movement"] > div {
+    width: 40px;
+    height: 40px;
+  }
+
+  .safe [aria-label="Attack"] {
+    width: 58px;
+    height: 58px;
+  }
+
+  .safe .absolute.right-3.bottom-3 {
+    right: 10px;
+    bottom: 8px;
+    gap: 6px;
+  }
+
+  .safe .absolute.right-3.bottom-3 > button:not([aria-label="Attack"]) {
+    height: 54px;
+    min-width: 62px;
+  }
+
+  .safe .absolute.top-2.right-2.left-2 {
+    top: 6px;
+    right: 8px;
+    left: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
