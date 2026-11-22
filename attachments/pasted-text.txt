@@ -1,0 +1,692 @@
+You are an elite AAA mobile game development team consisting of a creative director, Unity 6 engineer, gameplay programmer, multiplayer engineer, technical artist, UI/UX designer, animator, sound designer, and QA engineer.
+
+YOUR MISSION:
+Build FRONTIER, a fully playable, premium-quality, original mobile 3D action-strategy MOBA game for Android and iOS.
+
+This is not a website, not a static prototype, not a UI mockup, and not a presentation. Build an actual game with functional gameplay, real interactions, scenes, transitions, animations, progression, and a complete first-play experience.
+
+==================================================
+01. GAME IDENTITY
+==================================================
+
+Game title: FRONTIER
+Tagline: Build Your Power. Shape The Battlefield.
+Genre: 3D Action MOBA + Strategy
+Camera: Top-down / slightly isometric
+Platforms: Android and iOS
+Orientation: LANDSCAPE ONLY
+Engine: Unity 6
+Language: English
+Visual direction: Premium stylized 3D, original fantasy + futuristic world.
+
+Core inspiration:
+- Brawl Stars: accessible controls, exciting combat, short matches.
+- Mobile Legends: hero abilities, MOBA combat, team strategy, objectives.
+- Clash of Clans: persistent base, progression, upgrades.
+- Clash Royale: readable tactical decisions and strategic resource use.
+
+IMPORTANT:
+Never copy their characters, maps, logos, UI, models, sounds, or copyrighted assets. Create a completely original intellectual property with its own art direction, mechanics, characters, and identity.
+
+The game must feel like a professionally designed commercial mobile game.
+
+==================================================
+02. TECHNOLOGY AND ARCHITECTURE
+==================================================
+
+Preferred architecture:
+- Unity 6
+- C#
+- Universal Render Pipeline (URP)
+- Unity Input System
+- Cinemachine
+- Animator and Timeline
+- Shader Graph
+- Addressables
+- TextMeshPro
+- ScriptableObjects for game configuration
+- Modular and maintainable gameplay architecture
+
+Multiplayer architecture:
+- Photon Fusion 2 integration-ready networking layer.
+- Server-authoritative gameplay design.
+- Matchmaking abstraction.
+- Player synchronization.
+- Server-side combat validation.
+- Reconnection handling.
+
+Backend:
+- Go API integration-ready architecture.
+- PostgreSQL for persistent player data.
+- Redis integration-ready caching.
+- Secure account and inventory services.
+
+If external credentials or multiplayer services are unavailable, DO NOT fake a working online multiplayer system. Build a fully playable offline practice mode with intelligent AI opponents and bots, and clearly separate it from future online functionality.
+
+Do not hardcode secrets or API keys.
+
+==================================================
+03. COMPLETE APP OPENING EXPERIENCE
+==================================================
+
+The first impression must be exceptional.
+
+Create the complete startup sequence:
+
+A. BOOT SCREEN
+- Display the original FRONTIER emblem.
+- Deep dark background.
+- Subtle atmospheric particles.
+- Smooth logo reveal.
+- Premium sound design.
+- No generic Unity splash-like custom imitation.
+- Clean transition to loading.
+
+B. CINEMATIC INTRO (5–10 seconds)
+Create an original cinematic introduction.
+
+Suggested sequence:
+1. Dark screen with subtle ambient sound.
+2. A mysterious energy source appears.
+3. Camera slowly approaches a floating futuristic-fantasy world.
+4. Several islands and structures become visible.
+5. The FRONTIER emblem emerges.
+6. Display the tagline: "Build Your Power. Shape The Battlefield."
+7. Smooth transition to the loading screen.
+
+The intro must be skippable with a clearly visible Skip button.
+
+C. LOADING SCREEN
+Create a fully designed loading experience:
+- FRONTIER branding.
+- Animated 3D world or character showcase.
+- Smooth progress indicator.
+- Loading percentage.
+- Short gameplay tips.
+- Asset preloading.
+- Scene preparation.
+- Resource initialization.
+- Graceful loading error handling.
+
+Never display a fake 100% loading indicator while assets are still loading.
+
+D. FIRST LAUNCH
+After loading:
+- Show a cinematic introduction to the world.
+- Introduce the player.
+- Start the tutorial automatically.
+- Do not overwhelm the player with menus.
+
+For returning players:
+- Skip first-time introduction.
+- Restore saved player progress.
+- Load the main menu directly after initialization.
+
+==================================================
+04. MAIN MENU
+==================================================
+
+Create a premium landscape mobile game main menu.
+
+Layout:
+- Left: Player profile, level, avatar and currencies.
+- Center: Large animated 3D hero standing in a beautiful environment.
+- Right: Daily missions, events and progression.
+- Bottom: Navigation bar.
+- Large and visually prominent PLAY button.
+
+Navigation:
+1. Home
+2. Heroes
+3. Base
+4. Battle
+5. Clan
+6. Shop
+7. Settings
+
+Every navigation item must work.
+
+Design:
+- Premium dark navy interface.
+- Cyan, electric blue and controlled gold accents.
+- Smooth transitions.
+- Glass-like panels used selectively.
+- Beautiful typography.
+- Original icons.
+- Responsive landscape layout.
+- Proper mobile safe areas.
+
+Avoid excessive visual clutter.
+
+==================================================
+05. HERO SYSTEM
+==================================================
+
+Create SIX original playable heroes.
+
+Each hero must have:
+- Unique name.
+- Unique silhouette.
+- Original 3D model.
+- Distinct color palette.
+- Idle animation.
+- Run animation.
+- Attack animation.
+- Skill animations.
+- Ultimate animation.
+- Victory animation.
+- Defeat animation.
+- Health and damage configuration.
+- Passive ability.
+- Three active abilities, including an ultimate.
+- Character-specific visual effects.
+
+Hero classes:
+1. Vanguard — durable frontline fighter.
+2. Assassin — high mobility.
+3. Arcanist — ranged magical damage.
+4. Ranger — precision ranged attacks.
+5. Support — team utility and healing.
+6. Controller — battlefield control.
+
+Create a beautiful hero selection interface:
+- Rotating 3D character preview.
+- Character information.
+- Ability descriptions.
+- Stats.
+- Selection animations.
+- Selected hero confirmation.
+
+Do not use six recolored copies of the same model. Each hero must have a recognizable design.
+
+==================================================
+06. CORE BATTLE GAMEPLAY
+==================================================
+
+This is the most important part.
+
+Build an actual playable top-down 3D combat system.
+
+Primary game mode: FRONTIER ARENA.
+
+Match format:
+- 3v3.
+- Target duration: 3–4 minutes.
+- One player-controlled hero.
+- Two allied AI bots.
+- Three enemy AI bots in offline practice.
+- Team objectives.
+- Clear victory and defeat conditions.
+
+CONTROLS:
+Left side:
+- Virtual movement joystick.
+
+Right side:
+- Basic attack button.
+- Ability 1.
+- Ability 2.
+- Ability 3.
+- Ultimate ability.
+
+Additional:
+- Targeting assistance.
+- Skill aiming.
+- Auto-target option.
+- Camera adjustment.
+- Pause/settings button.
+
+All controls must work correctly on touchscreen devices.
+
+COMBAT:
+- Real-time character movement.
+- Collision handling.
+- Health and damage.
+- Cooldowns.
+- Skill targeting.
+- Projectile physics.
+- Hit reactions.
+- Combat feedback.
+- Health bars.
+- Damage numbers.
+- Elimination announcements.
+- Respawn system where appropriate.
+- Match timer.
+- Score tracking.
+
+Build intelligent AI opponents with:
+- Target selection.
+- Movement.
+- Attack behavior.
+- Ability usage.
+- Objective awareness.
+- Retreat when low on health.
+- Team coordination.
+
+Do not use stationary enemies that simply wait to be attacked.
+
+==================================================
+07. SIGNATURE MECHANIC: LIVING ARENA
+==================================================
+
+Create an original dynamic battlefield system.
+
+The battlefield contains an energy CORE.
+
+Gameplay:
+- Teams fight for control of the CORE.
+- Capturing objectives changes the battlefield.
+- Certain bridges or routes unlock.
+- Special structures become activated.
+- New tactical opportunities appear.
+- The environment communicates changes visually and through sound.
+
+The system must be implemented as real gameplay logic, not just an animation.
+
+Create at least one fully playable arena with:
+- Multiple lanes or routes.
+- Central objective.
+- Jungle-style side area.
+- Environmental obstacles.
+- Distinctive terrain.
+- Spawn zones.
+- Objective indicators.
+
+The map must be optimized for mobile performance.
+
+==================================================
+08. BASE BUILDING
+==================================================
+
+Create a persistent player base.
+
+The player can:
+- View the base in 3D.
+- Rotate and inspect the environment.
+- Select buildings.
+- Upgrade buildings.
+- Collect available resources.
+- Unlock new buildings.
+- See upgrade progress.
+- Place buildings in permitted locations.
+
+Initial buildings:
+1. Headquarters.
+2. Resource Generator.
+3. Defense Tower.
+4. Hero Training Center.
+5. Technology Laboratory.
+6. Energy Core.
+
+Each building must have:
+- Original model.
+- Level progression.
+- Upgrade cost.
+- Upgrade duration.
+- Visual upgrade stages.
+- Functional purpose.
+
+Base progression must influence gameplay through balanced unlocks and strategic options, not unfair pay-to-win bonuses.
+
+==================================================
+09. TUTORIAL AND FIRST-USER EXPERIENCE
+==================================================
+
+Build a complete interactive tutorial.
+
+Tutorial chapters:
+
+CHAPTER 1 — Welcome to FRONTIER
+- Introduce the world.
+- Introduce the selected hero.
+- Explain the objective.
+
+CHAPTER 2 — Movement
+- Teach joystick movement.
+- Require the player to move to a target.
+
+CHAPTER 3 — Basic Combat
+- Teach basic attacks.
+- Introduce a practice target.
+
+CHAPTER 4 — Abilities
+- Teach all basic abilities.
+- Teach ultimate activation.
+
+CHAPTER 5 — Objectives
+- Introduce the CORE.
+- Teach capturing and controlling it.
+
+CHAPTER 6 — First Battle
+- Launch a guided 3v3 practice match.
+- Let the player control their hero.
+- Use AI teammates and opponents.
+
+CHAPTER 7 — Base
+- Introduce the Headquarters.
+- Teach resource collection and one upgrade.
+
+CHAPTER 8 — Rewards
+- Show earned rewards.
+- Explain progression.
+- Transition to the main menu.
+
+Tutorial requirements:
+- Fully interactive.
+- Step-by-step visual instructions.
+- Highlight relevant controls.
+- Detect successful player actions.
+- Never advance before required actions are completed.
+- Allow pausing and resuming.
+- Save tutorial progress.
+
+==================================================
+10. RESULTS AND PROGRESSION
+==================================================
+
+After every match show a professional results screen.
+
+Include:
+- Victory or defeat.
+- Match duration.
+- Player statistics.
+- Eliminations.
+- Assists.
+- Objectives captured.
+- XP earned.
+- Currency earned.
+- Progression updates.
+- Continue button.
+- Return to home button.
+
+Implement:
+- Player levels.
+- XP progression.
+- Hero mastery.
+- Hero unlock system.
+- Daily missions.
+- Achievement system.
+- Basic rewards.
+
+Save all player progress persistently.
+
+==================================================
+11. CUTSCENES AND ANIMATIONS
+==================================================
+
+Create original cinematic sequences:
+- Initial game intro.
+- Hero reveal.
+- Match start.
+- Victory.
+- Defeat.
+- CORE activation.
+- New hero unlock.
+- Base upgrade.
+
+Animation quality:
+- Smooth character movement.
+- Responsive attack animations.
+- Ability effects.
+- Camera transitions.
+- Particle systems.
+- Environmental animations.
+- UI transitions.
+
+Cutscenes must be skippable where appropriate.
+
+Never make the player wait through unnecessary long animations.
+
+==================================================
+12. AUDIO DESIGN
+==================================================
+
+Create an original audio identity:
+- Main theme.
+- Menu ambience.
+- Battle music.
+- Combat sound effects.
+- Ability sound effects.
+- Button feedback.
+- Victory and defeat audio.
+- Cinematic sound design.
+
+Include independent volume settings for:
+- Music.
+- Sound effects.
+- Voice.
+- Master volume.
+
+==================================================
+13. SETTINGS
+==================================================
+
+Implement:
+- Graphics quality.
+- FPS options.
+- Sound controls.
+- Language selection architecture.
+- Control sensitivity.
+- Auto-target configuration.
+- Camera settings.
+- Haptic feedback toggle.
+- Tutorial replay.
+- Account settings architecture.
+
+The game must adapt to different screen sizes and aspect ratios.
+
+==================================================
+14. MOBILE PERFORMANCE
+==================================================
+
+Optimize for real Android and iOS devices.
+
+Requirements:
+- Landscape orientation lock.
+- Responsive UI.
+- Stable frame pacing.
+- Object pooling.
+- Efficient particle systems.
+- LOD where appropriate.
+- Texture compression.
+- Efficient lighting.
+- Mobile-friendly shaders.
+- Memory-conscious asset loading.
+- Addressables-based asset management.
+- Scene preloading where appropriate.
+- Graceful low-memory handling.
+
+Target:
+- 60 FPS on supported mid-range devices.
+- Configurable 30 FPS fallback.
+- Stable performance during battles.
+- No unnecessary background processing.
+- No avoidable stutters during scene transitions.
+
+==================================================
+15. UI/UX QUALITY STANDARD
+==================================================
+
+The UI must look like a premium global mobile game.
+
+Never create:
+- Generic AI-looking interface.
+- Plain default Unity buttons.
+- Empty screens.
+- Placeholder navigation.
+- Nonfunctional controls.
+- Repetitive cards.
+- Unnecessary text-heavy layouts.
+
+Use:
+- Custom interface components.
+- Consistent spacing.
+- Clear visual hierarchy.
+- Beautiful typography.
+- Original icons.
+- Responsive animations.
+- Strong contrast.
+- Clear touch targets.
+- Consistent visual identity.
+
+Every screen must be designed intentionally.
+
+==================================================
+16. CODE QUALITY AND PROJECT STRUCTURE
+==================================================
+
+Use clean, modular architecture.
+
+Separate:
+- Bootstrap and initialization.
+- Scene management.
+- UI management.
+- Input handling.
+- Player controller.
+- Hero abilities.
+- Combat system.
+- AI system.
+- Match management.
+- Objective system.
+- Base management.
+- Inventory.
+- Progression.
+- Save system.
+- Audio.
+- Settings.
+- Networking.
+
+Use ScriptableObjects for configurable game data.
+
+Avoid:
+- One enormous GameManager.
+- Duplicate systems.
+- Hardcoded scene dependencies.
+- Unnecessary Update loops.
+- Unmanaged event subscriptions.
+- Memory leaks.
+- Fake implementations.
+- Empty methods pretending to be functional.
+
+Create clear documentation for setup and development.
+
+==================================================
+17. REQUIRED SCENES
+==================================================
+
+Create and connect these scenes:
+
+1. Boot
+2. CinematicIntro
+3. Loading
+4. Tutorial
+5. MainMenu
+6. HeroSelection
+7. BattleArena
+8. BattleResults
+9. PlayerBase
+10. Settings
+
+All scene transitions must work.
+
+The application must launch into Boot and follow the correct startup sequence.
+
+==================================================
+18. TESTING AND ACCEPTANCE CRITERIA
+==================================================
+
+Do not declare the project complete until the following have been tested:
+
+[ ] Application launches successfully.
+[ ] Landscape orientation works.
+[ ] Intro plays correctly.
+[ ] Intro can be skipped.
+[ ] Loading screen reports actual progress.
+[ ] Main menu loads.
+[ ] All navigation works.
+[ ] Hero selection works.
+[ ] Hero abilities work.
+[ ] Tutorial is interactive.
+[ ] Player movement works.
+[ ] Combat works.
+[ ] AI opponents work.
+[ ] 3v3 practice battle works.
+[ ] Living Arena mechanics work.
+[ ] Match results appear correctly.
+[ ] XP and rewards are calculated correctly.
+[ ] Base buildings can be upgraded.
+[ ] Progress persists after restarting.
+[ ] Settings work.
+[ ] No critical console errors.
+[ ] No broken scene transitions.
+[ ] No nonfunctional buttons.
+
+Test on different screen aspect ratios and device performance profiles.
+
+==================================================
+19. DEVELOPMENT EXECUTION RULES
+==================================================
+
+First inspect the available environment and determine whether a genuine Unity 6 project can be created and executed.
+
+If Unity project creation is supported:
+- Build the actual Unity project.
+- Create real scenes, scripts, prefabs and assets.
+- Ensure all references are correctly assigned.
+- Provide Android and iOS build configuration.
+
+If Unity project creation is not supported:
+- Explicitly explain the limitation.
+- Do not pretend a browser mockup is a native Unity game.
+- Build the closest genuinely playable prototype supported by the environment.
+- Keep architecture and assets portable toward the intended Unity implementation.
+
+Work in logical milestones:
+1. Project foundation and startup.
+2. Main menu and navigation.
+3. Hero system.
+4. Combat and AI.
+5. Arena and objectives.
+6. Tutorial.
+7. Base and progression.
+8. Results, settings and persistence.
+9. Optimization and QA.
+
+After each milestone:
+- Run available tests.
+- Fix discovered issues.
+- Verify actual functionality.
+- Report completed features and remaining limitations.
+
+Do not replace working systems with fake placeholders to save time.
+
+Do not sacrifice gameplay quality just to create many screens.
+
+If a feature is too large for the current build, implement a genuinely working smaller version and document the remaining scope.
+
+==================================================
+FINAL GOAL
+==================================================
+
+Deliver a cohesive, visually impressive, genuinely playable first version of FRONTIER.
+
+The first-time user must experience:
+
+Boot → Cinematic Intro → Loading → Tutorial → First Battle → Results → Main Menu → Hero Selection → Base → Another Battle.
+
+The returning player must experience:
+
+Boot → Loading → Main Menu → Continue Playing.
+
+The finished result must feel like the foundation of a real commercial mobile game, not a school project, UI mockup or static prototype.
+
+Prioritize:
+1. Fun gameplay.
+2. Responsive mobile controls.
+3. Strong visual identity.
+4. Smooth startup and loading.
+5. Functional progression.
+6. Stable performance.
+7. Expandable architecture.
+
+BEGIN BY INSPECTING THE ENVIRONMENT, THEN BUILD THE GAME. DO NOT STOP AT PLANNING OR PRODUCING A DESIGN DOCUMENT.
